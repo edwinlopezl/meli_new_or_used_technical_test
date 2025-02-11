@@ -1,0 +1,71 @@
+Loading dataset...
+ 
+ 
+Starting -- Building Dataset...
+Final DF shape: (100000, 65)
+Used perc.: 46.242
+Building OK!
+X_train shape: (70000, 191)
+X_test shape: (30000, 191)
+y_train shape: (70000,)
+y_test shape: (30000,)
+ 
+ 
+XGB Calibration -- Starts...
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+ 
+Best parameters founded: XGB:
+{'colsample_bytree': 0.7, 'learning_rate': 0.2, 'max_depth': 9, 'n_estimators': 400, 'subsample': 1.0}
+ 
+CV XGB Train (Accuracy):
+0.8625142857142857
+ 
+TEST: XGB Accuracy: 0.8626
+TEST: XGB AUC-PR: 0.9238961724280095
+ 
+TEST: XGB - Classification report:
+              precision    recall  f1-score   support
+
+       False       0.88      0.86      0.87     16127
+        True       0.84      0.87      0.85     13873
+
+    accuracy                           0.86     30000
+   macro avg       0.86      0.86      0.86     30000
+weighted avg       0.86      0.86      0.86     30000
+
+ 
+TEST: XGB - Confussion Matrix:
+[[13822  2305]
+ [ 1817 12056]]
+ 
+LGBM Calibration -- Starts...
+Fitting 5 folds for each of 729 candidates, totalling 3645 fits
+ 
+Best parameters founded: LGBM:
+{'colsample_bytree': 0.7, 'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 300, 'num_leaves': 100, 'subsample': 0.7}
+ 
+CV LGBM Train (Accuracy):
+0.8613571428571429
+ 
+TEST: LGBM Accuracy: 0.8618666666666667
+TEST: LGBM AUC-PR: 0.9242779852463952
+ 
+TEST: LGBM - Classification report:
+              precision    recall  f1-score   support
+
+       False       0.89      0.85      0.87     16127
+        True       0.84      0.87      0.85     13873
+
+    accuracy                           0.86     30000
+   macro avg       0.86      0.86      0.86     30000
+weighted avg       0.86      0.86      0.86     30000
+
+ 
+TEST: LGBM - Confussion Matrix:
+[[13746  2381]
+ [ 1763 12110]]
+ 
+Best model: XGB
+Accuracy: 0.8626
+AUC-PR: 0.9238961724280095
+OK! Model saved. End of script

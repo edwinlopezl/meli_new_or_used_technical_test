@@ -1,0 +1,17 @@
+*.docx
+*.parquet
+*.jsonlines
+*.pdf
+*.zip
+*.rar
+
+.ipynb_checkpoints/
+.__pycache__/
+
+notebooks/.ipynb_checkpoints/
+notebooks/.__pycache__/
+
+python_scripts/.ipynb_checkpoints/
+python_scripts/.__pycache__/
+
+*.pyc
